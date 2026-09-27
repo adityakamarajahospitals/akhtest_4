@@ -963,6 +963,40 @@ footer{padding:clamp(56px,7vw,80px) 0 30px}
   .lb-next{right:10px;top:auto;bottom:12px;transform:none}
   .lb-foot{bottom:20px;max-width:56vw}
 }
+
+/* ===== Department boxes on the homepage (2026-09-27) ===== */
+/* desktop: 12-column grid, the three departments with their own page span 4 (three in a row), the rest span 3 (four in a row) */
+.dept-cards{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;margin-bottom:clamp(40px,6vw,72px)}
+.dcard2{grid-column:span 3;display:flex;flex-direction:column;background:#fff;border-radius:22px;box-shadow:var(--soft);overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.dcard2:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(11,37,69,.05),0 22px 48px rgba(12,77,162,.14)}
+.dcard2 .media{aspect-ratio:16/10;overflow:hidden;background:#EEF3F8}
+.dcard2 .media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.dcard2:hover .media img{transform:scale(1.04)}
+.dcard2 .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.dcard2 h3{font-size:var(--h3);color:var(--blue);line-height:1.25}
+.dcard2 p{font-size:.95rem;color:var(--muted);line-height:1.55;margin:0}
+.dcard2 .more{margin-top:auto;padding-top:6px;font-weight:700;font-size:.9rem;color:var(--teal-dark);display:inline-flex;align-items:center;gap:6px}
+.dcard2 .more svg{width:16px;height:16px;transition:transform .2s}
+.dcard2:hover .more svg{transform:translateX(3px)}
+.dcard2.lead{grid-column:span 4}
+.dcard2.lead .body{padding:22px 24px 24px}
+.dcard2.lead h3{font-size:var(--sub)}
+.dcard2.lead p{font-size:1rem}
+@media (max-width:1023px){
+  .dept-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .dcard2,.dcard2.lead{grid-column:span 1}
+}
+@media (max-width:640px){.dept-cards{grid-template-columns:1fr;gap:14px}}
+
+/* ===== About: teaser on the homepage, full story on /about ===== */
+.about-teaser{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center}
+.about-teaser .about-copy .btn{margin-top:22px}
+.about-teaser-founders{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:900px){.about-teaser{grid-template-columns:1fr}}
+@media (max-width:480px){.about-teaser-founders{grid-template-columns:1fr}}
+.about-hero h1{color:var(--blue);margin-top:12px}
+.about-hero .lede{color:var(--muted);font-size:1.12rem;margin-top:14px;max-width:60ch}
+.about-page{padding-top:clamp(24px,3vw,36px)}
 </style>
 </head>
 <body id="top">
@@ -979,7 +1013,7 @@ footer{padding:clamp(56px,7vw,80px) 0 30px}
           <button type="button" class="dd-btn active" aria-haspopup="true" aria-expanded="false">Our Departments <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
           <div class="dd-menu"><a href="/eye-care">Eye Care</a><a href="/sleep-care" aria-current="page">Integrated Sleep Care</a><a href="/general-medicine">General Medicine</a><a href="/other-departments">Other Departments</a></div>
         </div>
-        <a href="/#about">About</a>
+        <a href="/about">About</a>
         <div class="dd">
           <button type="button" class="dd-btn" aria-haspopup="true" aria-expanded="false">Resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
           <div class="dd-menu dd-menu-sm"><a href="/blog">Blog</a><a href="/gallery">Gallery</a></div>
@@ -1145,7 +1179,7 @@ footer{padding:clamp(56px,7vw,80px) 0 30px}
       <div>
         <h3>Hospital</h3>
         <div class="foot-list">
-          <a href="/#about">About the hospital</a>
+          <a href="/about">About the hospital</a>
           <a href="/#faq">Frequently asked questions</a>
           <a href="/blog">Blog</a>
           <a href="/gallery">Gallery</a>
