@@ -1,5 +1,125 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "adityakamarajahospitals.in"
+        },
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "189"
+        }
+      ],
+      "destination": "https://akh.co.in/about",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "adityakamarajahospitals.in"
+        },
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "68"
+        }
+      ],
+      "destination": "https://akh.co.in/contact",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "adityakamarajahospitals.in"
+        },
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1180"
+        }
+      ],
+      "destination": "https://akh.co.in/other-departments",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adityakamarajahospitals.in"
+        },
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "189"
+        }
+      ],
+      "destination": "https://akh.co.in/about",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adityakamarajahospitals.in"
+        },
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "68"
+        }
+      ],
+      "destination": "https://akh.co.in/contact",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adityakamarajahospitals.in"
+        },
+        {
+          "type": "query",
+          "key": "page_id",
+          "value": "1180"
+        }
+      ],
+      "destination": "https://akh.co.in/other-departments",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "adityakamarajahospitals.in"
+        }
+      ],
+      "destination": "https://akh.co.in/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.adityakamarajahospitals.in"
+        }
+      ],
+      "destination": "https://akh.co.in/",
+      "permanent": true
+    }
+  ]
 }
